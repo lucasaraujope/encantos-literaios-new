@@ -1,0 +1,137 @@
+.hero {
+  & .bg-image {
+    height: auto;
+    display: grid;
+    gap: 3rem;
+
+    background-image: url(../Assets/images/hero-background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    margin-bottom: 2rem;
+
+    & nav {
+      max-width: 100%;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.25rem 1.25rem 0 1.25rem;
+
+      & > div {
+        & button {
+          position: relative;
+          max-width: 100%;
+          width: 5.5621rem;
+          padding: 0.75rem 1.25rem;
+
+          border-radius: 0.5rem;
+
+          background-color: var(--pink-dark);
+
+          cursor: pointer;
+
+          transition: opacity 50s es;
+
+          &:hover::after {
+            opacity: 0.3;
+            transform: scaleX(1);
+          }
+
+          & a {
+            font: var(--button);
+            color: var(--text-title);
+            position: relative;
+            z-index: 1;
+          }
+        }
+
+        & button::after {
+          content: "";
+          width: 5.5645rem;
+          height: 2.75rem;
+
+          background-color: var(--pink-base);
+
+          position: absolute;
+
+          border-radius: 0.5rem;
+
+          top: 0rem;
+          left: 0rem;
+
+          opacity: 0;
+
+          transform: scaleX(0);
+          transition: transform 500ms linear;
+        }
+      }
+    }
+
+    & .title {
+      max-width: 100%;
+      width: 20.9375rem;
+      text-align: center;
+      display: grid;
+      gap: 1rem;
+      margin-inline: auto;
+      padding-bottom: 12.0625rem;
+
+      & h1 {
+        height: auto;
+        font-size: 1.75rem;
+      }
+
+      & p {
+        font-size: var(--fs-sm);
+      }
+    }
+  }
+
+  & .about {
+    position: relative;
+    text-align: center;
+    
+    width: 20.9375rem;
+    margin-inline: auto;
+    padding-top: 3rem;
+
+    & strong{
+        color: var(--blue-light);
+    }
+
+    & img {
+      width: 2.5rem;
+    }
+
+    & img:nth-child(1){
+        position: absolute;
+        top: 0;
+        right: 3.7rem;
+        transform: rotate(10deg);
+    }
+
+    & span{
+        font-weight: var(--fs-md);
+        line-height: 1.4;
+    }
+
+    & img:nth-child(5){
+        position: absolute;
+        display: inline-block;
+        left: 0;
+        top: 92%;
+        transform: rotate(-30deg);
+        width: 2rem;
+    }
+
+    & img:nth-child(6){
+        position: absolute;
+        right: 0.7rem;
+        top: 100%;
+        transform: rotate(20deg);
+        width: 2rem;
+    }
+
+  }
+}
