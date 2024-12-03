@@ -1,0 +1,78 @@
+.pricing {
+  text-align: center;
+  max-width: 100%;
+  width: 23.4375rem;
+  height: auto;
+
+  & h2 {
+    width: 13.8125rem;
+    margin-inline: auto;
+  }
+
+  & .card {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    width: 17rem;
+    margin-inline: auto;
+
+    border: solid 1px var(--blue-dark);
+    border-radius: 1rem;
+
+    background-color: var(--blue-low);
+
+    padding: 2rem 2rem 1.75rem 2rem;
+
+    & .price {
+      display: flex;
+      flex-direction: column;
+      align-items: baseline;
+      gap: 1.75rem;
+      width: 13rem;
+
+      & > span {
+        font-size: var(--fs-reg);
+        font-weight: var(--fw-bd);
+        color: var(--blue-light);
+      }
+      & .info-price {
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+        gap: 0.5rem;
+
+        width: 13rem;
+
+        & > div {
+          display: flex;
+
+          & p {
+            font-size: var(--fs-lg);
+            font-weight: var(--fw-bd);
+          }
+
+          & span {
+            align-self: flex-end;
+            padding-bottom: 0.3rem;
+            font-weight: var(--fw-bd);
+          }
+        }
+      }
+    }
+
+    & .list-benefits {
+      margin-top: 5.187rem;
+
+      & div {
+        display: flex;
+        align-items: center;
+        justify-content:flex-start;
+        width: 15rem;
+
+        & p {
+          font-size: var(--fs-sm);
+        }
+      }
+    }
+  }
+}

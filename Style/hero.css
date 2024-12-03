@@ -31,10 +31,10 @@
 
           cursor: pointer;
 
-          transition: opacity 50s es;
+          
 
           &:hover::after {
-            opacity: 0.3;
+            opacity: 0.5;
             transform: scaleX(1);
           }
 
