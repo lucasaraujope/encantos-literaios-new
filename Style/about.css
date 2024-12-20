@@ -1,0 +1,80 @@
+& .about {
+    position: relative;
+    text-align: center;
+
+    width: 20.9375rem;
+    margin-inline: auto;
+    padding-top: 3rem;
+
+    & img {
+      width: 2.5rem;
+      opacity: 0;
+    }
+
+    & img:nth-child(1) {
+      position: absolute;
+      top: 0;
+      right: 3.7rem;
+      transform: rotate(10deg);
+    }
+
+    & span {
+      font-weight: var(--fs-md);
+      line-height: 1.4;
+      color: #e2e7e9;
+      opacity: 50%;
+    }
+
+    & img:nth-child(5) {
+      position: absolute;
+      display: inline-block;
+      left: 0;
+      top: 92%;
+      transform: rotate(-30deg);
+      width: 2rem;
+    }
+
+    & img:nth-child(6) {
+      position: absolute;
+      right: 0.7rem;
+      top: 100%;
+      transform: rotate(20deg);
+      width: 2rem;
+    }
+  }
+
+  & .about:hover {
+    & img:nth-child(1) {
+      opacity: 1;
+      transition: linear opacity ease;
+    }
+
+    & span:nth-child(2) {
+      opacity: 1;
+      transition: opacity ease;
+    }
+
+    & span:nth-child(3) {
+      opacity: 1;
+      transition-property: opacity;
+      transition-delay: 0.5s;
+    }
+
+    & span:nth-child(4) {
+      opacity: 1;
+      transition-property: opacity;
+      transition-delay: 1s;
+    }
+
+    & img:nth-child(5) {
+      opacity: 1;
+      transition-property: opacity;
+      transition-delay: 0.5s;
+    }
+
+    & img:nth-child(6) {
+      opacity: 1;
+      transition-property: opacity;
+      transition-delay: 1s;
+    }
+  }

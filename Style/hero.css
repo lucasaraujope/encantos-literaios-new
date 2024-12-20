@@ -1,5 +1,8 @@
 .hero {
+  animation: fadeIn 7s ease;
+
   & .bg-image {
+    transition: background-image 4s;
     height: auto;
     display: grid;
     gap: 3rem;
@@ -30,8 +33,6 @@
           background-color: var(--pink-dark);
 
           cursor: pointer;
-
-          
 
           &:hover::after {
             opacity: 0.5;
@@ -87,51 +88,13 @@
       }
     }
   }
+}
 
-  & .about {
-    position: relative;
-    text-align: center;
-    
-    width: 20.9375rem;
-    margin-inline: auto;
-    padding-top: 3rem;
-
-    & strong{
-        color: var(--blue-light);
-    }
-
-    & img {
-      width: 2.5rem;
-    }
-
-    & img:nth-child(1){
-        position: absolute;
-        top: 0;
-        right: 3.7rem;
-        transform: rotate(10deg);
-    }
-
-    & span{
-        font-weight: var(--fs-md);
-        line-height: 1.4;
-    }
-
-    & img:nth-child(5){
-        position: absolute;
-        display: inline-block;
-        left: 0;
-        top: 92%;
-        transform: rotate(-30deg);
-        width: 2rem;
-    }
-
-    & img:nth-child(6){
-        position: absolute;
-        right: 0.7rem;
-        top: 100%;
-        transform: rotate(20deg);
-        width: 2rem;
-    }
-
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
