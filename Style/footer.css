@@ -1,17 +1,102 @@
 footer {
-  background: url(../Assets/images/book-trace-background.png) bottom/cover no-repeat;
+  width: 100%;
+
+  background: url(../Assets/Icons/book-trace-background.svg) bottom/contain
+    no-repeat;
+  padding: 6.125rem 2rem 2.375rem;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
 
-  & .divasor {
-    height: 2rem;
-    width: 100%;
-    border: 5px solid #fff;
+  & .links {
+    text-align: center;
+    .footer-image {
+      width: 9.91375rem;
+      height: 2.5rem;
+      margin-bottom: .5rem;
+    }
+
+    & .divisor {
+      width: 100%;
+      border-bottom: 0.1px solid var(--blue-low);
+      margin-bottom: 0.5rem;
+    }
+
+    & .social-links {
+      display: flex;
+      align-items: center;
+      z-index: -2;
+      gap: 1.5rem;
+
+      & a {
+        z-index: 1;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+
+        position: relative;
+
+        &:hover::before {
+          scale: 1;
+        }
+
+        & svg:hover path {
+          fill: #fff;
+        }
+
+        &::before {
+          content: "";
+
+          width: inherit;
+          height: inherit;
+          border-radius: inherit;
+
+          background: var(--blue-dark);
+
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: -1;
+
+          scale: 0;
+          transition: scale 200ms;
+        }
+
+        & svg {
+          width: 1.5rem;
+          height: 2rem;
+        }
+      }
+    }
   }
 
-  & .social-links {
-    & ul {
-      display: flex;
+  & .other-links {
+    display: flex;
+    gap: 1.5rem;
+
+    & .content-link,
+    & .help-links {
+      width: 8.9375rem;
+      height: 8.4375rem;
+
+      & h3 {
+        font-size: var(--fs-reg);
+        margin-bottom: 1.5rem;
+      }
+
+      & ul {
+        display: flex;
+        flex-direction: column;
+
+        justify-content: space-between;
+        gap: 1rem;
+      }
+
+      & a {
+        font-size: var(--fs-sm);
+        color: var(--blue-base);
+      }
     }
   }
 }
