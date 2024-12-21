@@ -58,7 +58,7 @@ html {
 
 body {
   background-color: var(--shape-background);
-  max-width: 23.4375rem;
+  max-width: 48rem;
 }
 
 a {
@@ -75,4 +75,9 @@ button {
   border: none;
 }
 
-
+@media (width >= 90em) {
+  body{
+    min-width: 90rem;
+  }
+  
+}

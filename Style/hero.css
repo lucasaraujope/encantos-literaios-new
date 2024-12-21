@@ -2,14 +2,14 @@
   animation: fadeIn 7s ease;
 
   & .bg-image {
-    transition: background-image 4s;
+    
     height: auto;
     display: grid;
     gap: 3rem;
 
     background-image: url(../Assets/images/hero-background.png);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
 
     margin-bottom: 2rem;
 
@@ -20,6 +20,14 @@
       align-items: center;
       justify-content: space-between;
       padding: 1.25rem 1.25rem 0 1.25rem;
+
+      & .mobile-img {
+        display: block;
+      }
+
+      & .web-img {
+        display: none;
+      }
 
       & > div {
         & button {
@@ -96,5 +104,49 @@
   }
   to {
     opacity: 1;
+  }
+}
+
+@media (width >= 90em) {
+  .hero {
+    max-width: 100%;
+    width: 100%;
+
+    & .bg-image {
+      width: 100%;
+      height: 60rem;
+      background-size: contain;
+      background-position: center;
+
+      & nav {
+        height: 6.625rem;
+        padding: 3.5rem 10rem 0 10rem;
+
+        & .mobile-img {
+          display: none;
+        }
+
+        & .web-img {
+          display: block;
+        }
+      }
+
+      & .title {
+        width: 41rem;
+        height: 12.5rem;
+        gap: 2em;
+
+        & h1 {
+          font-size: var(--fs-xlg);
+          height: 7rem;
+        }
+
+        & p{
+          font-size: var(--fs);
+          width: 35.5rem;
+          margin-inline: auto;
+        }
+      }
+    }
   }
 }
